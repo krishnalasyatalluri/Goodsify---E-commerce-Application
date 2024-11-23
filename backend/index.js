@@ -10,6 +10,7 @@ const configureDB=require('./configureDB/db')
 require('dotenv').config();
 PORT=process.env.PORT
 app.use(express.json())
+app.use(cors())
 dotenv.config()
 configureDB()
 app.use('/user',userRouter)
